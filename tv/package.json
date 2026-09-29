@@ -1,0 +1,34 @@
+{
+  "name": "hotel-display-tv",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env EXPO_TV=1 NODE_OPTIONS=--dns-result-order=ipv4first expo start --dev-client --host localhost",
+    "android": "node scripts/run-android.js",
+    "prebuild": "cross-env EXPO_TV=1 expo prebuild --platform android",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.117.0",
+    "expo": "~57.0.24",
+    "expo-dev-client": "~57.0.19",
+    "expo-keep-awake": "~57.0.2",
+    "expo-sqlite": "~57.0.3",
+    "expo-video": "~57.0.4",
+    "react": "19.2.3",
+    "react-native": "npm:react-native-tvos@0.86-stable",
+    "react-native-qrcode-svg": "6.3.21",
+    "react-native-svg": "15.15.4",
+    "react-native-url-polyfill": "^4.0.0"
+  },
+  "devDependencies": {
+    "@react-native-tvos/config-tv": "0.1.6",
+    "@types/react": "~19.2.2",
+    "cross-env": "10.1.0",
+    "eslint": "9.39.3",
+    "eslint-config-expo": "~57.0.2",
+    "typescript": "~6.0.3"
+  }
+}
